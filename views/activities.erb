@@ -27,7 +27,7 @@
         <% if @activity.running? %>
           <form action='/activities/<%= @activity.id %>/stop' method='post'>
             <label class='time-input' for='stop_time'><%= format_time(@activity.start_time) %> - </label>
-            <input id='stop_time' class='time-input' type='time' name='stop_time' value='<%= Time.now.stamp('02:00') %>'>
+            <input id='stop_time' class='time-input' type='time' name='stop_time' value='<%= Time.now.stamp('22:24') %>'>
             <button type='submit'>Stop</button>
           </form>
 
