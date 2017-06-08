@@ -1,0 +1,45 @@
+<section class='row-alt'>
+  <div class='lead container'>
+    <h3>Activities</h3>
+</div>
+</section>
+
+<section class='row'>
+  <div class='grid'>
+
+    <div class='col-1-3'>
+      <ul>
+        <% @activities.each do |activity| %>
+          <li>
+            <a href='/activities/<%= activity.id %>'><%= activity.name %></a>
+          </li>
+        <% end %>
+      </ul>
+    </div><!--
+
+ --><div class='col-1-3 center-align'>
+      <%= yield if block_given? %>
+    </div><!--
+
+ --><div class='col-1-3 right-align'>
+      <% if @activity %>
+
+        <!-- ADD FEATURE -->
+        <form action='/activities/<%= @activity.id %>/start' method='post'>
+          <input type='time' name='start'>
+          <button type='submit'>Start</button>
+        </form>
+
+        <!-- ADD FEATURE -->
+        <form action='/activities/<%= @activity.id %>/end' method='post'>
+          <button type='submit'>End</button>
+        </form>
+
+        <form action='/activities/<%= @activity.id %>/delete' method='post'>
+          <button type='submit'>Delete</button>
+        </form>
+      <% end %>
+    </div>
+
+  </div>
+</section>

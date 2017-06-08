@@ -1,0 +1,19 @@
+<section class='row-alt'>
+  <div class='lead container'>
+    <h3>New Activity</h3>
+</div>
+</section>
+
+<section>
+  <section class='row'>
+    <form action='/new' method='post'>
+      <div class='inline'>
+        <label for='name'>Name:
+          <input name='name' value='<%= params[:name] %>'>
+        </label>
+      </div>
+      <button type='submit'>Save</button>
+      <a href='/'>Cancel</a>
+    </form>
+  </section>
+</section>

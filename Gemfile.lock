@@ -1,0 +1,58 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.7.0)
+    backports (3.8.0)
+    bcrypt (3.1.11)
+    coderay (1.1.1)
+    erubis (2.7.0)
+    method_source (0.8.2)
+    minitest (5.10.2)
+    multi_json (1.12.1)
+    mustermann (1.0.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    psych (2.2.4)
+    puma (3.9.1)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.0)
+      backports (>= 2.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.0)
+      sinatra (= 2.0.0)
+      tilt (>= 1.3, < 3)
+    slop (3.6.0)
+    tilt (2.0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  bcrypt
+  erubis
+  minitest
+  pry
+  psych
+  puma
+  rack-test
+  sinatra
+  sinatra-contrib
+
+RUBY VERSION
+   ruby 2.4.0p0
+
+BUNDLED WITH
+   1.15.1
