@@ -12,13 +12,24 @@
       <a href='/'>Time Tracker</a>
     </h1>
 
-    <h5 class='time'><%= Time.now %></h5>
+    <h5 class='time'><%= current_time_str %></h5>
 
     <nav class='nav'>
       <ul>
         <li><a href='/'>Activities</a></li>
         <li><a href='/new'>New</a></li>
-        <li><a href='#'>Sign in</a></li>
+
+        <% if signed_in? %>
+          <li>
+            <form action='/signout' method='post'>
+              <button class='btn-link'>Sign out</button>
+            </form>
+          </li>
+        <% else %>
+          <li>
+            <a href='/signin'>Sign in</a>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </header>

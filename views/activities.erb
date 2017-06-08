@@ -1,7 +1,7 @@
 <section class='row-alt'>
   <div class='lead container'>
     <h3>Activities</h3>
-</div>
+  </div>
 </section>
 
 <section class='row'>
@@ -24,19 +24,22 @@
  --><div class='col-1-3 right-align'>
       <% if @activity %>
 
-        <!-- ADD FEATURE -->
-        <form action='/activities/<%= @activity.id %>/start' method='post'>
-          <input type='time' name='start'>
-          <button type='submit'>Start</button>
-        </form>
+        <% if @activity.running? %>
+          <form action='/activities/<%= @activity.id %>/stop' method='post'>
+            <label class='time-input' for='stop_time'><%= format_time(@activity.start_time) %> - </label>
+            <input id='stop_time' class='time-input' type='time' name='stop_time' value='<%= Time.now.stamp('02:00') %>'>
+            <button type='submit'>Stop</button>
+          </form>
 
-        <!-- ADD FEATURE -->
-        <form action='/activities/<%= @activity.id %>/end' method='post'>
-          <button type='submit'>End</button>
-        </form>
+        <% else %>
+          <form action='/activities/<%= @activity.id %>/start' method='post'>
+            <input class='time-input' type='time' name='start_time' value='<%= Time.now.stamp('02:00') %>'>
+            <button type='submit'>Start</button>
+          </form>
+        <% end %>
 
         <form action='/activities/<%= @activity.id %>/delete' method='post'>
-          <button type='submit'>Delete</button>
+          <button>Delete Activity</button>
         </form>
       <% end %>
     </div>

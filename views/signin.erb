@@ -1,0 +1,21 @@
+<section class='row-alt'>
+  <div class='lead container'>
+    <h3>Sign In</h3>
+  </div>
+</section>
+
+<section class='row center-align'>
+  <form action='/signin' method='post'>
+    <div>
+      <label for='username'>Username:</label>
+      <input id='username' name='username' value='<%= params[:username] %>'>
+      <br>
+      <label for='password'>Password:</label>
+      <input id='password' name='password' type='password'>
+    </div>
+    <div class='signin'>
+      <button>Sign In</button>
+      <a class='cancel' href='/'>Cancel</a>
+    </div>
+  </form>
+</section>

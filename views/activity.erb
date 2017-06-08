@@ -1,3 +1,34 @@
+<h3 class='activity'><%= @activity.name %></h3>
 
-  <h3><%= @activity.name %></h3>
-  <p>activity details</p>
+<div class='status'>
+  <% if @activity.running? %>
+    <p>Running - <%= @activity.current_total %>
+  <% else %>
+    <p>Stopped</p>
+  <% end %>
+</div>
+
+<% if @activity.history? %>
+  <section class='history'>
+    <h4>History</h4>
+    <ul>
+      <% @activity.history.each do |item| %>
+        <li>
+          <div class='underline'>
+            <%= format_time(item[:start_time]) %> - <%= format_time(item[:stop_time]) %>
+            <form class='inline' action='/activities/<%= @activity.id %>/delete_history_item' method='post'>
+              <button name='item' value='<%= item %>'>Delete</button>
+            </form>
+          </div>
+          <%= Activity.format_seconds(item[:seconds])%>
+        </li>
+      <% end %>
+      <li class='total'>
+        <div class='underline total'>
+          Total
+        </div>
+          <%= Activity.format_seconds(@activity.history_total_seconds) %>
+      </li>
+    </ul>
+  </section>
+<% end %>

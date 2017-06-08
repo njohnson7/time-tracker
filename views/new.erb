@@ -6,14 +6,14 @@
 
 <section>
   <section class='row'>
-    <form action='/new' method='post'>
+    <form class='center-align' action='/new' method='post'>
       <div class='inline'>
         <label for='name'>Name:
-          <input name='name' value='<%= params[:name] %>'>
+          <input id='name' name='name' value='<%= params[:name] %>'>
         </label>
       </div>
-      <button type='submit'>Save</button>
-      <a href='/'>Cancel</a>
+      <button>Save</button>
+      <a class='cancel' href='/'>Cancel</a>
     </form>
   </section>
 </section>

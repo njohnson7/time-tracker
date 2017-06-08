@@ -34,6 +34,7 @@ GEM
       sinatra (= 2.0.0)
       tilt (>= 1.3, < 3)
     slop (3.6.0)
+    stamp (0.6.0)
     tilt (2.0.7)
 
 PLATFORMS
@@ -50,6 +51,7 @@ DEPENDENCIES
   rack-test
   sinatra
   sinatra-contrib
+  stamp
 
 RUBY VERSION
    ruby 2.4.0p0

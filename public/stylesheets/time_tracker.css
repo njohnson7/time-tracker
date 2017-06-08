@@ -243,7 +243,7 @@ h2 {
 }
 
 h3 {
-  font-size: 21px;
+  font-size: 22px;
 }
 
 h4 {
@@ -318,7 +318,7 @@ ul {
 }
 
 input {
-  background-color: #111;
+  background: #131313;
   border: 1px solid #33b5e5;
   border-radius: 5px;
   color: #fff;
@@ -328,7 +328,7 @@ input {
 }
 
 button {
-  background: #222;
+  background: #131313;
   border: none;
   border-radius: 5px;
   color: #33b5e5;
@@ -370,4 +370,97 @@ button:hover {
 .time {
   text-align: right;
   font-size: 10px;
+}
+
+.time-input {
+  border: 1px;
+  color: #33b5e5;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.status {
+  font-size: 14px;
+}
+
+.history {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.history h4 {
+  /*text-decoration: underline;*/
+  /*display: block;*/
+  /*border-bottom-width: 5px;*/
+  /*border-color: #aaa;*/
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.history ul {
+  font-size: 13px;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.underline {
+  /*text-decoration: underline;*/
+  border-bottom-width: 1px;
+  border-bottom-color: #eee;
+  border-style: solid;
+  padding-top: 5px;
+}
+
+.history button {
+  background: #000;
+  display: inline-block;
+  border-radius: 4px;
+  color: #33b5e5;
+  cursor: pointer;
+  /*letter-spacing: 0.5px;*/
+  /*margin-left: px;*/
+  float: right;
+  padding: 2px 0 2px 2px;
+  font-size: 12px;
+  /*text-align: right;*/
+}
+
+.history button:hover {
+  background: #33b5e5;
+  color: #000;
+}
+
+.history .total {
+  color: #33b5e5;
+  border-color: #33b5e5;
+}
+
+#username, #password {
+  margin: 5px;
+}
+
+.cancel {
+  margin-left: 5px;
+}
+
+div.signin {
+  margin-top: 10px;
+}
+
+.btn-link{
+  /*border:none;*/
+  /*outline:none;*/
+  background: #000;
+  cursor: pointer;
+  color: #fff;
+  padding: inherit;
+  text-decoration: inherit;
+  font-family:inherit;
+  font-size:inherit;
+}
+
+.btn-link:hover {
+  background: #000;
+  color: #33b5e5;
 }
