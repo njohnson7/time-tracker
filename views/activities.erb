@@ -33,7 +33,7 @@
 
         <% else %>
           <form action='/activities/<%= @activity.id %>/start' method='post'>
-            <input class='time-input' type='time' name='start_time' value='<%= Time.now.stamp('02:00') %>'>
+            <input class='time-input' type='time' name='start_time' value='<%= Time.now.stamp('22:24') %>'>
             <button type='submit'>Start</button>
           </form>
         <% end %>
